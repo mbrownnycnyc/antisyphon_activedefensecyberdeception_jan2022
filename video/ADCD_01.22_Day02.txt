@@ -1,0 +1,58 @@
+00.00.10 - Pre-Show Banter
+01.10.37 - Class Start
+01.22.00 - MITRE Engage
+01.25.12 - Mapping Cyber Deception to Mitre framework/tactics.
+01.28.02 - DISCLAIMER
+01.32.43 - Don't hack the hackers - maintain high ethical standards.
+01.33.15 - Active vs Passive Defense
+01.37.03 - Prevent/Detect/Respond - Automated response (SOAR) is garbage.
+01.40.08 - Poison (taken, consumed), not venom (injected).
+01.41.58 - Cyber Deception definition.
+01.43.16 - Detection time + Reaction time < Attack time.
+01.44.09 - Honey user accounts increase attack time and decrease detection time.
+01.44.54 - Deception does not replace other layers of defense but is part of Defense-In-Depth.
+01.45.49 - Obligatory Sun Tzu quote  :)  / APT Wheel of PAIN and how to plug in cyberdefenses.
+01.48.17 - How to hunt properly - look for the poop and paths.
+01.49.22 - Push past 'victim mentality' and 'just patching'.
+01.50.27 - OODA Loop
+01.57.05 - Disrupt attackers OODA Loop and turn your loop faster.
+01.58.14 - Avoid legal trouble.
+02.01.40 - No lethal traps.
+02.05.51 - Time differentiates attackers from pentesters.
+02.08.28 - Verizon DBIR - How was compromise detected? 80% External source.
+02.10.23 - Internal log review = 1.3% detection rate.
+02.11.43 - Average attacker dwell time on a system before detection is 24 days.
+02.12.02 - Used to be 365+ days. False stat B/C ransomware notification by attackers is NOT detection.
+02.12.48 - BREAK - Deb & Jason Banter time - Blockchain, crypto, etc.
+02.24.20 - Back to class
+02.26.55 - Current strategies not working Quacks/Hacks/Geniuses
+02.29.39 - Who is the threat? Everyone.
+02.31.25 - Attackers have same or better technologies than you.
+02.34.26 - Attackers will use whichever OS they need to be successful. 
+02.25.37 - Segmentation of Internal Networks
+02.35.42 - You will be exploited! 
+02.36.26 - Not OK = long dwell time or fast success of attacks/lateral movement/escalations.
+02.42.34 - You should be able to detect insider attacks.
+02.45.10 - Threat Emulation - An active defense is an engaged defense.
+02.48.05 - Stratego game analogy
+02.48.38 - Emulation uses actual malware, Simulation uses (e.g.) Atomic Red Team via Powershell.
+02.49.12 - Difference matters less than starting either NOW.
+02.49.40 - TOOLS - Caldera (released by MITRE), Atomic Red Team, Sigma Detect
+02.52.00 - LAB OVERVIEW BlueSpawn/Atomic Red Team
+03.20.09 - Active defense requires something of you. Can't just buy, set and forget. Fine tuning required.
+03.22.31 - LAB WALKTHROUGH BlueSpawn/Atomic Red Team
+03.29.18 - Modifications but 0 detections - may not match any signature that Bluespawn knows.
+03.31.30 - LAB WALKTHROUGH - how/if Bluespawn detects metasploit shell/registry commands.
+03.37.40 - CISA alerts - show which techniques to look for.
+03.41.38 - Bloodhound
+03.45.39 - Goal is to to get caught - see techniques that were detected - enables gap analysis.
+03.46.57 - Key takeaways
+03.48.43 - Only one goal of a pentester is to make your own life more difficult.
+03.50.17 - LAB OVERVIEW - Advanced C2 - pcap analysis
+04.21.54 - ExtraHop - SSL/TLS decrypt useless B/C double encryption
+04.25.19 - LAB WALKTHROUGH - Advanced C2 - pcap analysis
+04.44.41 - AMA
+
+
+
+

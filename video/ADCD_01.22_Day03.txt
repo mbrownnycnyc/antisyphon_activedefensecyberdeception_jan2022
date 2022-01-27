@@ -1,0 +1,55 @@
+00.00.00 - Pre-Show Banter - Interrogations, hostages, background investigations
+00.07.30 - JS Polygraph story
+00.16.13 - Class Start - Slide 102 review of Drop from the CLI - generate log file
+00.18.08 - Windows version of honeyport lab - use PowerShell - lots of scripts online. Paul Assadorian.
+00.29.32 - Vendors - extrahop / darktrace $$$$
+00.36.34 - Secuity Onion is awesome and free. / ntopng rides on top of zeek data.
+00.38.05 - Honeyports in the Enterprise
+00.40.45 - Create white noise to increase attacker engagement time / portspoof is good squishy
+00.44.43 - LAB OVERVIEW - portspoof
+00.59.33 - Where to run portspoof
+01.00.27 - Use firewall shenanigans to create an absolute nightmare that will make even shodan give up.
+01.02.14 - LAB WALKTHROUGH - portspoof
+01.10.08 - Increase time & work for attacker, gain more time/signatures for detection using shenanigans.
+01.12.56 - Use firewall, not socat to redirect
+01.14.00 - BREAK - Steve's 'Enterprise Attack Initial Access' class info
+01.31.15 - Honeyports in the Enterprise layout
+01.31.35 - Creating a spoofed service / cowrie
+01.35.09 - Capture commands that attacker ran after access!
+01.42.57 - Cowrie in the enterprise
+01.43.54 - LAB OVERVIEW: cowrie
+02.00.07 - LAB WALKTHROUGH: cowrie
+02.10.42 - Threat intel in the log - get both sides of the conversation - TTP and MORE!!
+02.14.14 - BREAK - Deb & Cassie the #prompt 'zine mastermindjjj
+02.30.30 - Artillery honeyport and file monitoring - forensics data - change port config to disguise
+02.34.10 - Shodan! Artillery port explanation - VNC - old systems are attractive targets.
+	    -works because of attacker apex predator mentality
+02.38.58 - Weblabyrinth - Ben Jackson's spidertrap PHP script - wheel of errors.
+02.42.46 - Application specific honeypot - SCADA ICS
+02.44.49 - LAB OVERVIEW: Web Honeypot / ZAP / Outlook
+03.01.06 - LAB WALKTHROUGH: Web Honeypot / ZAP / Outlook
+03.02.18 - Use honeypots - Don't fear the attacker! They will search for easier prey.
+03.13.49 - BREAK = Jason & Deb film chat, Spearfish store fashion trends/restock info, bad stock tips.
+03.25.48 - Legal issues - very few attorneys know what they're doing RE:Computer law. Case examples.
+03.30.53 - University students' right to privacy
+03.32.42 - Don't be your own lawyer! Reasonable access, exigent circumstances.
+03.35.27 - Susan v. Absolute
+03.39.28 - Attribution issues to keep it legal - IP address and geolocation (teaser - will cover tomorrow)
+03.41.20 - Your phone is tracking you constantly, everywhere. Judge Walter Rice line in the sand.
+03.43.45 - Reflected attack example - E-Hippies
+03.44.29 - Microsoft v. Waledac
+03.49.05 - AMA
+- Repel hackers but draw the line at doxxing.
+- Windows Defender is just fine endpoint product.
+- Firewall redirect rules.
+- New version of AC Hunter includes cyberdecption (honeyusers and honeyfiles increase detection).
+- Almost all newer firewalls are stateful (learns state - TCP sequence numbers).
+- Honeypot breadcrumbs are not entrapment.
+- Remote workforce/SAS/cloud - honeypot concept still applies.
+- Applied Purple Team - https://www.youtube.com/watch?v=_KqtVWrw_Gc&t=82s
+- PCI/DSS certification and active directory accounts - compliance is grey area - mitigating controls.
+
+
+
+
+

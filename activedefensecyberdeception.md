@@ -15,7 +15,7 @@
   * https://attackevals.mitre-engenuity.org/index.html
   * deception and the legal ramifications?  entrapment
   * lateral movement detection can occur by using deception technology and alerting on things.
-  * Cymmetria
+  * Cymmetria, illusive, attivo, acalvio, attibo, trapx
   * https://www.ultimatewindowssecurity.com/securitylog/training/default.aspx
   * https://github.com/BrandonsProjects/WEFC
   * 
@@ -117,19 +117,44 @@
 - [26. weblabyrinth](#26-weblabyrinth)
 - [27. applicaiton specific honeypots](#27-applicaiton-specific-honeypots)
   - [27.1. beware of OPSEC](#271-beware-of-opsec)
-- [lab 8: web honeypot](#lab-8-web-honeypot)
-- [legal issues](#legal-issues)
-  - [concent to university network terms](#concent-to-university-network-terms)
-  - [susan v. `absolute` software](#susan-v-absolute-software)
-  - [public example of reflected attack](#public-example-of-reflected-attack)
-  - [MSFT court order: botnet](#msft-court-order-botnet)
-  - [look at your warning banner](#look-at-your-warning-banner)
-  - [protecting your intellectual property](#protecting-your-intellectual-property)
-  - [how can the callbacks go wrong?](#how-can-the-callbacks-go-wrong)
-    - [our actual goals](#our-actual-goals)
-  - [hallmarks of legality](#hallmarks-of-legality)
-  - [here is data we can gather](#here-is-data-we-can-gather)
-- [lab 9: honeyuser](#lab-9-honeyuser)
+- [28. lab 8: web honeypot](#28-lab-8-web-honeypot)
+- [29. legal issues](#29-legal-issues)
+  - [29.1. concent to university network terms](#291-concent-to-university-network-terms)
+  - [29.2. susan v. `absolute` software](#292-susan-v-absolute-software)
+  - [29.3. public example of reflected attack](#293-public-example-of-reflected-attack)
+  - [29.4. MSFT court order: botnet](#294-msft-court-order-botnet)
+  - [29.5. look at your warning banner](#295-look-at-your-warning-banner)
+  - [29.6. protecting your intellectual property](#296-protecting-your-intellectual-property)
+  - [29.7. how can the callbacks go wrong?](#297-how-can-the-callbacks-go-wrong)
+    - [29.7.1. our actual goals](#2971-our-actual-goals)
+  - [29.8. hallmarks of legality](#298-hallmarks-of-legality)
+  - [29.9. here is data we can gather](#299-here-is-data-we-can-gather)
+- [30. lab 9: honeyuser](#30-lab-9-honeyuser)
+- [31. TOR](#31-tor)
+- [32. canarytokens](#32-canarytokens)
+- [33. lab 10: canarytokens](#33-lab-10-canarytokens)
+  - [33.1. word web bugs](#331-word-web-bugs)
+- [34. AD honeyadmin](#34-ad-honeyadmin)
+  - [34.1. manual process](#341-manual-process)
+- [35. honeyshare and honeydoc](#35-honeyshare-and-honeydoc)
+- [36. lab 11: honeyshare](#36-lab-11-honeyshare)
+- [37. infinitely recursive directories](#37-infinitely-recursive-directories)
+  - [37.1. purpose](#371-purpose)
+  - [37.2. lab 12:](#372-lab-12)
+- [38. deception-tool-kit](#38-deception-tool-kit)
+- [39. wireless HoneyAPs](#39-wireless-honeyaps)
+- [40. honeyclaymore](#40-honeyclaymore)
+- [41. arming documents](#41-arming-documents)
+  - [41.1. evil files](#411-evil-files)
+  - [41.2. payload creation](#412-payload-creation)
+  - [41.3. wait](#413-wait)
+- [42. exe2vba.rb](#42-exe2vbarb)
+- [43. generate the macro](#43-generate-the-macro)
+- [44. tools:](#44-tools)
+- [45. lab 13: honeybadger](#45-lab-13-honeybadger)
+- [46. summary](#46-summary)
+- [47. cyber kill chain](#47-cyber-kill-chain)
+- [48. remember that this is your house](#48-remember-that-this-is-your-house)
 
 # 1. MITRE Engage framework
 
@@ -813,7 +838,7 @@ dsa_private_key = ${honeypot:state_path}/ssh_host_dsa_key
 * xiphosreearch.com/20156/12/09/OPSEC-For-Honeyports.htm
 * also scan with nmap, as their defs also indicate honeypots
 
-# lab 8: web honeypot
+# 28. lab 8: web honeypot
 
 * indicator of username harvesting and password spraying.
 * IDEA: given user harvesting mechanism (linkedin), try to throw off via manufacturered timing attack.
@@ -832,20 +857,20 @@ nohup python3 /opt/owa-honeypot/owa_pot.py &
 less +F /opt/owa-honeypot/dumpass.log
 ```
 
-# legal issues
+# 29. legal issues
 * many of our assumptions are well founded
   * there is not alot of etablished case law here
 * however, if you look at existing case law, you can see some interesting trends.
 * THIS IS NOT ENTRAPMENT or ENTICEMENT.
 
-## concent to university network terms
+## 29.1. concent to university network terms
 * sysadmin hacks into threatening machine
 * gathered evidence used against student
 * student's concent to university terms justifies sysadmin
 * `US v. Heckenkamp`
   * kevin poulsen article: "court okays counter-hack of eBay hacker's computer"
 
-## susan v. `absolute` software
+## 29.2. susan v. `absolute` software
 * substitute teacher buys stolen laptop
 * laptop has trackign software and software to spy on the thief
 * embarrassing pictures are taken
@@ -856,7 +881,7 @@ less +F /opt/owa-honeypot/dumpass.log
   * you can not break the law even if they are breaking the law.
   * you can attribute via IP address and geographic location
 
-## public example of reflected attack
+## 29.3. public example of reflected attack
 * in 1999, the world trade organization website had a DoS attack from the e-hippies coalition
 * hosting service Conxion reflected the attack back to E-Hippies and disabled its website
   * all through the use of a mod_rewrite rule
@@ -864,13 +889,13 @@ less +F /opt/owa-honeypot/dumpass.log
   * it also logged 10000 unique ip addr
   * we are seeing the same type of insanity with LIOC
 
-## MSFT court order: botnet
+## 29.4. MSFT court order: botnet
 * civil lawsuit 2010:
   * ex parte temporary restrining order
 * count issues order to suspend the domains associated with the waledec botnet
 * MSFT takes "other technical measures" to degrade the botnet.
 
-## look at your warning banner
+## 29.5. look at your warning banner
 * lhere is a lot in there about permission
 * you also have a lot of tech that will check your system before it accesses the network
   * openvpn scripts
@@ -879,7 +904,7 @@ less +F /opt/owa-honeypot/dumpass.log
 * the warning banner should CLEARLY state exactly what we're goin to do:
   * tracking your source ip address and leverage geolocation for tracking purposes.
 
-## protecting your intellectual property
+## 29.6. protecting your intellectual property
 * callbacks:
   * software updaes
 * software that checks license keys
@@ -887,19 +912,19 @@ less +F /opt/owa-honeypot/dumpass.log
 * tracking software in phones
 * we are not necessrily talking about hacking, we are talking about getting attribution or stuff we see every day
 
-## how can the callbacks go wrong?
+## 29.7. how can the callbacks go wrong?
 * mistakes or unintended consequences
 * easily accessible malware
 * full attacks of attacker ip addr
 * crashing systems
 * persistent long-term access
 
-### our actual goals
+### 29.7.1. our actual goals
 * annoyance: delay attacker, increase complexity.
 * attribution: attribute attack to attacker.
 * attack
 
-## hallmarks of legality
+## 29.8. hallmarks of legality
 * Active Cyber Defense Certainty Act (ACDC)
 * discuss, document, plan, consult with others
 * do not hige: hiding may be interpreted as what you thiunk you are doing is "wrong"
@@ -910,7 +935,7 @@ less +F /opt/owa-honeypot/dumpass.log
   * don't become the people you're defending against
 * striking back / hacking back is not something you should do ever ever.
 
-## here is data we can gather
+## 29.9. here is data we can gather
 * ip address and location info
   * ads, google, apple apps, etc etc etc
 * word web bugs
@@ -924,7 +949,7 @@ less +F /opt/owa-honeypot/dumpass.log
   * check for a higher resolution?
 * we might contact the FBI special agent covering our jurisdiction as discuss what we're planning on doing.
 
-# lab 9: honeyuser
+# 30. lab 9: honeyuser
 
 * https://github.com/strandjs/IntroLabs/blob/master/IntroClassFiles/Tools/IntroClass/honeyuser/honeyuser.md
 
@@ -937,3 +962,220 @@ less +F /opt/owa-honeypot/dumpass.log
 4. ???
    
 5. profit.
+
+
+# 31. TOR
+
+* when attacking using TOR, make sure you are routing through TOR.  Like for real?
+  * leverage `proxychains` for example
+
+
+# 32. canarytokens
+
+* this creates call backs using various items
+* you can use thinkst servers or your own
+* use cases:
+  * ransomware exfil (external)
+  * ransomware enum (internal)
+    * compromised systems
+    * websites (robots.txt)
+    * email to spammers!
+  * indicator of attack other enum (internal)
+  * website cloning for spearphishing
+* note that if you traceroute the fina IP, you will have bad geolocation
+  * but if you geolocate the last hop, you will have good geolocation
+
+# 33. lab 10: canarytokens
+
+* https://github.com/strandjs/IntroLabs/blob/master/IntroClassFiles/Tools/IntroClass/canarytokens/Canarytokens.md
+
+1. access https://www.canarytokens.org/generate and generate a token
+
+![](2022-01-27-13-37-17.png)
+
+2. use token.
+
+## 33.1. word web bugs
+* built into Core Impact
+  * leverages CSS, and will work in MANY word doc readers
+
+# 34. AD honeyadmin
+* DTE0010
+* DTE0012
+
+## 34.1. manual process
+* create account
+* set logon hours to 0
+  * login denied
+* setup rules for monitoring
+* run password spray
+
+# 35. honeyshare and honeydoc
+
+* create a doc
+* move it to a linux server and share
+* start using impacket smbserver (okay!)
+
+
+# 36. lab 11: honeyshare
+
+* https://github.com/strandjs/IntroLabs/blob/master/IntroClassFiles/Tools/IntroClass/honeyshare/HoneyShare.md
+* you can use a canary file and distribute it from this share as well.
+
+1. start impacket's smb server
+```
+python3 /opt/impacket/examples/smbserver.py -smb2support -comment 'secret' SECRET /secret
+```
+
+2. try to access the share
+
+```
+net use * \\172.17.78.175\secret 
+```
+
+3. review impacket output
+
+
+# 37. infinitely recursive directories
+
+## 37.1. purpose
+
+* slow down exfil and ransomware spread
+  * use enticing, wordlist, default impacket etc etc, word lists
+* exclude from backups
+
+## 37.2. lab 12:
+
+1. make a directory
+
+```
+mkdir goaway
+```
+
+2. make a link to that parent directory
+
+```
+cd 
+mklink /d level2 ..\goaway
+```
+
+3. there is a maximum directory depth
+
+# 38. deception-tool-kit
+* review this it contains honey pot data for Windows
+
+
+# 39. wireless HoneyAPs
+1. set up a cloaded SSID
+   1. hard to cvonvince a hury they didn't know it was youirs
+2. enable WPA2-PSK, but choose a guessable passphrase
+   1. use one from a dictionary file that comes wioth aircrack-ng works well
+   2. this helps to prove intend and to put us on solid legal footing
+3. present a captive portal page complete with Terms of Use
+   1. use your logo and make it look official
+   2. attacker thinks its for the employees
+   3. attacker must accept ToU
+   4. enforce ToU give you authority to do what you want to do
+4. redirect to a page with the BeEF hook
+   1. deliver some interesting content to hold his interest for a while
+   2. ensure he doesn't hack through your trap
+5. use BeEF's autorun rule engine to kick off desired modules
+6. Optional:
+   1. generate an alert
+   2. block mac
+
+# 40. honeyclaymore
+* YOU MUST GET A WARRANT BEFORE YOU CREATE CALLBACKS (or have other legal footing)
+* forget honey tokens
+* if someone uses one of these files, it will compromise the system and open a reverse connection to yo
+  * excel spreadsheets
+  * word docs
+  * pdfs
+
+# 41. arming documents
+
+## 41.1. evil files
+* metasploit has multiple different file format exploits
+* metasploit also has the capability to insert payloads into a number of formats
+* use these files in sensitive directories
+
+## 41.2. payload creation
+
+![](2022-01-27-14-34-04.png)
+
+* macro attachment process
+
+![](2022-01-27-14-34-25.png)
+
+## 41.3. wait
+
+![](2022-01-27-14-34-42.png)
+
+* still might get caught
+
+# 42. exe2vba.rb
+* convers exe to vba and can be imported into exel and word
+* in metasploit package
+  
+# 43. generate the macro
+![](2022-01-27-14-38-20.png)
+
+# 44. tools:
+* honeybadger: locates attackers:
+  * uses google api's
+  * triangulation wireless AP detection: see https://www.wigle.net/ + https://developers.google.com/maps/documentation/geolocation/overview
+  * ip based geolocation
+* trick the attacker
+  * vnc servers
+  * etc etc
+* a note about JARs
+  * looks old.
+  * self-signed
+  * attackers love them
+
+# 45. lab 13: honeybadger
+
+* https://github.com/strandjs/IntroLabs/blob/master/IntroClassFiles/Tools/IntroClass/HoneyBadger.md
+
+1. execute honey badger by searching history (ctrl-r, type honeybad, then hit ctrl-r until you...) to locate the keys in the history
+
+```
+python3 /opt/honeybadger/server/honeybadger.py -ik 692c110dd5b4bd74dc96154a13ee0050 -gk AIzaSyAqlo
+lb-AxzkAVas4eiObLjVNDfm9VFnf0
+```
+
+2. then you can execute the file.  This will callback the info to be analyzed by honeybadger.
+
+* you need to obfuscate javascript
+
+
+# 46. summary
+* active defense:
+  * the employment of limited offensive action and counterattacks to deny a contested area or position to the enemy
+  * proactive, aticipatory, and reactionary actiosn against aggressors
+  * the adversaires are already inside your gates
+* passive defense:
+  * measrues taken to reduce the probabily of and to minimize the affects of damage caused by hostile action without the intention of taking the initiative
+  * traditional static defenses (hope for the best)
+* prevent | dtection | response
+  * prevention is ideal, but detection is a must, and dtection without response is of little value.
+* offensive countermeasures employ offensive techniques as agressors attacks, but with a defensive posture
+  * aikio...
+* think poinison, not venom
+* always ensure legal ooting
+* cyber deception is the deliverate and calculated process of deceiving attackers in an effort to wage a better defense
+  * slow them down, confuse them, deceive them.. make them work harder
+  * serves to significantly increase yor changes of detection
+  * designed to make `Detection time + reaction time < attack time`
+
+* get all up in their OODA loop.
+
+# 47. cyber kill chain
+
+* but turn it around and get into their OODA loop
+
+![](2022-01-27-15-15-34.png)
+
+# 48. remember that this is your house
+
+![](2022-01-27-15-17-27.png)
